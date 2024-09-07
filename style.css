@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stopwatch-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stopwatch-container {
+    background-color: #f5f5f5;
+    border-radius: 50%; /* Make it round */
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid #333; /* Dark border for vintage look */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; /* To ensure the crown effect does not overflow */
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    color: #333;
+    position: absolute;
+    top: 20px; /* Positioned near the top inside the circle */
+}
+
+.time-box {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.controls {
+    margin-top: 20px; /* Space between stopwatch and buttons */
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+    flex-grow: 1;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.laps-container {
+    margin-top: 20px;
+    width: 100%; /* Make the lap list take the full width */
+}
+
+.laps {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.laps li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ring or crown at the top */
+.crown {
+    position: absolute;
+    top: -30px; /* Position above the stopwatch */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ea0707;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+@media (max-width: 400px) {
+    .stopwatch-container {
+        width: 240px;
+        height: 240px;
+    }
+
+    .time {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}

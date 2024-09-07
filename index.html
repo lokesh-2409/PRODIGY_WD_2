@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Round Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-body">
+        <div class="crown"></div>
+        <div class="stopwatch-container">
+            <h1 class="brand-name">Stopwatch</h1>
+            <div class="time-box">
+                <div id="time-display" class="time">00:00:00.00</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start" class="btn">Start</button>
+            <button id="pause" class="btn">Pause</button>
+            <button id="reset" class="btn">Reset</button>
+            <button id="lap" class="btn">Lap</button>
+        </div>
+        <div class="laps-container">
+            <ul id="laps" class="laps"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
